@@ -24,6 +24,7 @@ AIエージェントが参照する企業知識・コンテキストのインデ
 | ドキュメント | 概要 | 主な内容 |
 |:---|:---|:---|
 | [Identity.md](10_Knowledge/00_Core/Identity.md) | 企業アイデンティティ | ミッション、ビジョン、バリュー、理念 |
+| [Takahashi_Writing_Style.md](10_Knowledge/00_Core/Takahashi_Writing_Style.md) | 執筆スタイルガイド | タカハシノリアキの文体、トーン、構成の定義 |
 | [Agent_Role_Architecture.md](10_Knowledge/00_Core/Agent_Role_Architecture.md) | AI組織図 | CXOエージェントの役割定義、責任範囲 |
 
 **用途**: すべてのAIエージェントがこれらを常に参照し、企業理念との整合性を保ちます。
