@@ -1,91 +1,37 @@
-# nonpro-core
+# furuya-project
 
-株式会社プランノーツの「ナレッジベース」兼「AIエージェントリポジトリ」です。
-このリポジトリは、プロジェクト参加メンバーおよびAIエージェント（Antigravity / Claude Code）と協働するための環境構造、およびそれを運用するためのエージェント定義を統合し、「Single Source of Truth（単一情報源）」として機能します。
+このリポジトリは、DX戦略プレゼンテーションのスクリプトとスライド、および関連するプロジェクト資料を管理するための個人的な作業スペースです。
 
-## 🏛️ Core Concept & Team Architecture
+## 🏛️ プロジェクトの目的
+- 現場を動かすDX戦略の策定
+- AI（Antigravity）との共創によるストーリーテリングの実践
 
-このリポジトリは、人間とAIが自律的に協働する環境を定義しています。作業は「ドキュメントアプリによる管理」から「IDEとAIエージェントによる共同作業」というエンジニアリング・スタイルに移行しました。
+## 📁 含まれている主なファイル
+- **dx_presentation_script.md**: 懇親会向けのプレゼン台本（AI共創版）
+- **dx_presentation_slides.md**: プレゼン用スライド構成案
+- **.agent/**: AIエージェントの設定とスキル定義
+- **00_Context_Library/**: プロジェクトの背景知識とナレッジベース
+
+## 📱 モバイルでの確認方法
+- **GitHubアプリ**: `dx_presentation_script.md` などを直接閲覧できます。
+- **Googleドライブ**: 本リポジトリのファイルをアップロードし、Googleスライド等と同期して使用します。
+
+---
+
+## 🛠️ 元のリポジトリ情報 (Reference)
+本プロジェクトは以下の構成をベースに構築されています。
 
 ### チーム編成（The Team）
 | メンバー / エージェント | 役割 (Role) | 担当領域 |
 | :--- | :--- | :--- |
 | **Human (あなた)** | Publisher / PM | 企画決定、最終承認、要件定義、Goサイン。 |
 | **Antigravity** | Director & CXO | メインの作業・開発パートナー。戦略立案、執筆、コーディング、システム構築。 |
-| **Claude Code** or **Gemini CLI** | Ops / Librarian | 自動整理、リファクタリング支援、Git運用などの裏方業務。 |
-
-### リポジトリの2本柱
-1. **Company Knowledge (知識・資産)**
-   戦略、歴史、ブランド資産など、不変的かつ根源的な情報を管理します。AIエージェントはこれらを常に文脈（Context）として参照し、深い整合性を保ちます。
-2. **AI Agents (頭脳・スキル)**
-   ナレッジを活用し、専門領域を遂行するAIエージェントの定義（Persona / Skill）およびワークフロー群です。
-
-## 📍 Directory Structure
-
-主な運用構造は以下の通りです。
-
-### `.agent/` - AIエージェント定義
-AIエージェントのアクティブなスキルとワークフロー定義。
-- **Skills**: 各CXO（最高責任者）クラスのペルソナ定義（CBO, CCO, CEDOなど）や、壁打ち支援（sounding_board）などの特定スキル。
-- **Workflows**: 定型業務の自動化手順書（`/create_event_plan` など）。
-- **Tools**: 実行スクリプト・ツール群（スライド生成、画像処理など）。
-
-**詳細**: [.agent/README.md](.agent/README.md)
-
-### `99_Guide/` - ユーザーガイド・マニュアル
-環境構築、セキュリティ、業務マニュアル（Playbook）、ツール使い方ガイド。
-- **00_Setup_Guide.md**: 環境構築・オンボーディング
-- **01_Security_Guidelines.md**: セキュリティガイドライン
-- **00_Playbook/**: 業務標準手順書（SOP）
-- **01_Tools/**: ツール使い方ガイド
-
-**詳細**: [99_Guide/README.md](99_Guide/README.md)
-
-### `00_Context_Library/` - ナレッジベース
-エージェントが参照すべき知識の源泉。
-- **10_Knowledge**:
-    - **00_Core**: 企業理念、AIエージェントの組織図
-    - **01_Business**: 事業計画、マーケティング文脈
-    - **02_Assets**: ロゴや各種ブランド資産
-- **20_Glossary**: 哲学的概念・用語集
-
-**詳細**: [00_Context_Library/INDEX.md](00_Context_Library/INDEX.md)
-
-### `80_Resources/` - リソース・テンプレート
-実務で使用するテンプレートや素材ファイルを管理します。
-- **Vivliostyle_Template**: 書籍制作テンプレート
-
-### `90_Archive/` - アーカイブ
-過去の分析レポートや一時的なドキュメントを保管します。
-
-## 🚀 Quick Start & Navigations
-
-### 新規参加メンバー
-1. **[環境構築](99_Guide/00_Setup_Guide.md)** - 開発ツールのインストールとセットアップ
-2. **[セキュリティガイドライン](99_Guide/01_Security_Guidelines.md)** - AI利用時の注意事項
-3. **[Playbook](99_Guide/00_Playbook/00_Start_Here.md)** - 業務フローの理解
-
-### 既存メンバー
-- **業務マニュアル**: [99_Guide/README.md](99_Guide/README.md)
-- **AIエージェント**: [.agent/README.md](.agent/README.md)
-- **ナレッジベース**: [00_Context_Library/INDEX.md](00_Context_Library/INDEX.md)
-
-### コントリビューター
-- **[Contributing Guide](CONTRIBUTING.md)** - コミット規約、ブランチ戦略、PR プロセス
-
----
-
-## 📖 主要ドキュメント
-
-### Agent Role Architecture
-**👉 [`00_Context_Library/10_Knowledge/00_Core/Agent_Role_Architecture.md`](00_Context_Library/10_Knowledge/00_Core/Agent_Role_Architecture.md)**
-- 「拡張された経営チーム（Augmented C-Suite）」のコンセプト
-- 各エージェント（CSO, CEDO, CCOなど）や支援スキル（sounding_board）の役割と責任範囲
-
-### Playbook (Operation Manuals)
-**👉 [`99_Guide/00_Playbook/00_Start_Here.md`](99_Guide/00_Playbook/00_Start_Here.md)**
-- イベント企画、スライド制作などの標準業務マニュアル（SOP）
-- 各業務に対応するAIワークフローコマンドの案内
+| **Gemini CLI** | Ops / Librarian | 自動整理、リファクタリング支援、Git運用などの裏方業務。 |
 
 ---
 *Created by Antigravity & User*
+
+---
+### 著者について (Original furuya-book content)
+古谷さん (Voicy/note)
+このリポジトリのコンテンツの著作権は古谷さんに帰属します。
